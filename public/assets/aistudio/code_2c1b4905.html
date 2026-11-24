@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copacabana Bar — Início (Desktop)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003422',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#174B36',
+        'on-primary-container': '#86BA9F',
+        'secondary': '#9E412A',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#FF8B6E',
+        'on-secondary-container': '#75230E',
+        'tertiary': '#00313E',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#08485A',
+        'on-tertiary-container': '#82B6CB',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#93000A',
+        'background': '#FFF8F2',
+        'on-background': '#1F1B15',
+        'surface': '#FFF8F2',
+        'surface-dim': '#E1D9CE',
+        'surface-bright': '#FFF8F2',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#FBF2E7',
+        'surface-container': '#F5EDE1',
+        'surface-container-high': '#F0E7DC',
+        'surface-container-highest': '#EAE1D6',
+        'on-surface': '#1F1B15',
+        'surface-variant': '#DCE5DD',
+        'on-surface-variant': '#404943',
+        'outline': '#717973',
+        'outline-variant': '#C0C9C2',
+        'inverse-surface': '#343029',
+        'inverse-on-surface': '#F8EFE4',
+        'inverse-primary': '#9DD2B6',
+        'shadow': '#000000',
+        'scrim': '#000000',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Crimson Pro"', 'sans-serif'],
+        'headline': ['"Crimson Pro"', 'sans-serif'],
+        'title': ['"Crimson Pro"', 'sans-serif'],
+        'body': ['"Lato"', 'sans-serif'],
+        'label': ['"Lato"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['17px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.25px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '700' }],
+        'mono-md': ['15px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+        'surface-exit': '160ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&amp;family=Lato:wght@400;700&amp;family=Source+Code+Pro:wght@600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+  <div class="min-h-[1024px] flex flex-col bg-surface" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Header compartilhado full-width (Desktop 1440px) -->
+    <header class="sticky top-0 z-30 w-full bg-primary-container text-on-primary border-b border-primary">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between gap-6">
+        <a href="../home-desktop/HomeDesktop.html" class="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-on-primary rounded">
+          <svg width="44" height="28" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="shrink-0 text-on-primary">
+            <path d="M4 38C10 20 18 10 25 10C32 10 35 22 43 22C51 22 57 16 68 38H4Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"></path>
+            <path d="M4 42H68" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <div class="flex flex-col leading-none">
+            <span class="font-headline text-title-lg tracking-wide text-on-primary" data-design-text-token="title-lg">COPACABANA BAR</span>
+            <span class="font-label text-label-sm text-on-primary-container" data-design-text-token="label-sm">Tatuapé · São Paulo</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegação principal" class="hidden md:flex items-center gap-8">
+          <a href="../home-desktop/HomeDesktop.html" aria-current="page" class="font-label text-label-lg text-on-primary border-b-2 border-on-primary pb-1" data-design-text-token="label-lg">
+            Início
+          </a>
+          <a href="../categories-desktop/CategoriesDesktop.html" class="font-label text-label-lg text-on-primary-container hover:text-on-primary transition-colors duration-state-change pb-1" data-design-text-token="label-lg">
+            Categorias
+          </a>
+          <a href="../porcoes-desktop/PorcoesDesktop.html" class="font-label text-label-lg text-on-primary-container hover:text-on-primary transition-colors duration-state-change pb-1" data-design-text-token="label-lg">
+            Porções
+          </a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary-container border border-on-primary-container font-label text-label-sm" data-design-text-token="label-sm">
+            Cardápio de Consulta
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 flex flex-col">
+
+      <!-- Hero Full-Width Desktop -->
+      <section class="w-full bg-primary-container text-on-primary">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 grid grid-cols-1 lg:grid-cols-12 items-center gap-10">
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <span class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary" data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status">
+              <span class="font-label text-label-sm" data-design-text-token="label-sm">A alma carioca no Tatuapé</span>
+            </span>
+            <h1 class="font-display text-display-lg-mobile lg:text-display-lg text-on-primary text-balance" data-design-text-token="display-lg">
+              Um pedacinho do Rio no Tatuapé
+            </h1>
+            <p class="font-body text-body-lg text-inverse-on-surface max-w-prose text-pretty" data-design-text-token="body-lg">
+              Chopp tirado com colarinho cremoso, roda de samba, mesas de madeira e os clássicos de boteco que transformam cada encontro em um fim de tarde carioca.
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="../categories-desktop/CategoriesDesktop.html" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-surface text-primary font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-surface-container">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">restaurant_menu</span>
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Explorar Cardápio</span>
+              </a>
+              <a href="../porcoes-desktop/PorcoesDesktop.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded border border-on-primary-container text-on-primary font-label text-label-lg transition-colors duration-state-change hover:bg-primary">
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Ver Porções</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="aspect-[16/10] w-full rounded-xl overflow-hidden border border-on-primary-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAhbyNLyTSFGmKNnvG5mvcw0LV6K9B446aRAQqCMC3128h3diOy36sIa4OrAA5fLqEtT0lG06ljP4id3WjqzwZcAwcrONX5c0_B8feEb_z3saOfnP10PG7tpIBuMm09DX3sFD7mzmWKtjdYvLonzk9zERBhtAxNCGPqQx-NV0Is_4fOtDjhGLZgXB8Cpi9fQ91ViuPUuxwlD1oR87mlWK659-7I9bryS9GY_eBzJQVLmZE6YZe8hHLdrXje" alt="Dois chopps bem gelados com colarinho cremoso em mesa de madeira do Copacabana Bar" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Faixa sutil de ondas de Copacabana -->
+        <div class="w-full h-5 bg-surface text-on-surface overflow-hidden" aria-hidden="true">
+          <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 20" fill="currentColor">
+            <path d="M0 10 Q 30 0, 60 10 T 120 10 T 180 10 T 240 10 T 300 10 T 360 10 T 420 10 T 480 10 T 540 10 T 600 10 T 660 10 T 720 10 T 780 10 T 840 10 T 900 10 T 960 10 T 1020 10 T 1080 10 T 1140 10 T 1200 10 T 1260 10 T 1320 10 T 1380 10 T 1440 10 L 1440 20 L 0 20 Z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Destaques da Casa -->
+      <section class="max-w-7xl w-full mx-auto px-6 lg:px-12 py-12 flex flex-col gap-6">
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex flex-col gap-1">
+            <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-on-surface" data-design-text-token="headline-lg">
+              Destaques da Casa
+            </h2>
+            <p class="font-body text-body-lg text-on-surface-variant" data-design-text-token="body-lg">
+              Sabores tradicionais do salão, do chopp gelado à feijoada servida em panelas de barro.
+            </p>
+          </div>
+          <a href="../porcoes-desktop/PorcoesDesktop.html" class="inline-flex items-center gap-1.5 font-label text-label-lg text-primary hover:underline shrink-0" data-design-text-token="label-lg">
+            Ver porções
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <a href="../dish-detail-desktop/DishDetailDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+            <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDHs5B2StjmK_TVZM2Zqq-d2teM4HIbnR8ff2NYJmsRJl005_TsXqkxBi84eNv9GisHdA8K1rx7lVj3yBr3liorNaMP6zOh6azsXSX-ER_aYslv23STe-Jy9IiJRxaRfenuweZgnZwYpfeOjwGSB235CYjUq4LUDyPKQ9rA9VI46IXdRa5jL8f9VhoxY3Sy1qFPpxMrHE7AGq64k_O4upS5FT6BzH6uZ7VNlRS6XtMCTv_A0a7qSaTdXI-K43TMYUpr" alt="Porção de Bolinho de Bacalhau" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+              <div class="flex flex-col gap-1.5">
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Bolinho de Bacalhau</h3>
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Receita tradicional carioca frita na hora, crocante por fora e macia por dentro.
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary" data-design-text-token="label-lg">
+                Ver detalhes <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+          <a href="../categories-desktop/CategoriesDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+            <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDwDBTBh_wnlrNJMWwHIjr7HuQ8fypNP8rLrWcbkcThWfvI1_JWefaEcIl_NVggKDLr2V312Rnuanl_vXMhE6SkSVH20JO1YaQ0V-cjC0YAA4-Tx46W4OXPiU5pcIKzDT9r2ySaprXqSq7Gu6rqjpNPIf_DJdsFeut-v8nY9tn0w_zP2tfzUK1MbQXiay-QVx_DbFjGFlOo8pm3Qv-YuunemHI0ex3JkDMslvFojkhBMphDmVCN" alt="Cervejas de garrafa 600ml e copo americano" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+              <div class="flex flex-col gap-1.5">
+                <h3 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Chopp &amp; Cervejas 600ml</h3>
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Chopp bem tirado e garrafas sempre trincando para acompanhar a conversa na calçada.
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary" data-design-text-token="label-lg">
+                Explorar bebidas <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="flex flex-col h-full rounded-lg bg-surface-container-low border border-secondary overflow-hidden">
+            <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBUAh-gg1x90wtxv7K1gkYWBkysnXNpJ-30HN2yWeQxIZWZ9Qw1jRlYI_3p_Urqm_94lAQuhtWEmJu60QrR2N6UUihkhqVFmBhWHkVEdqCKhKaYCe_RJiwAKlrYJik_kCcVg1Vw8c0L_5WTYpR07zK93SCkPPDEQHO3oIrX27z-hZef-jHrCQkqsGdAX0K9R88bXsUq--vYbmCS3sIu6YJa-39M2EqlHycDEAd0vkV-W3ijtUEIrUAhhZs" alt="Buffet tradicional de feijoada do Copacabana Bar com panelas de barro" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+              <div class="flex flex-col gap-2">
+                <span class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary" data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status">
+                  <span class="font-label text-label-sm" data-design-text-token="label-sm">Especial de Sábado</span>
+                </span>
+                <h3 class="font-title text-title-lg text-on-surface" data-design-text-token="title-lg">Feijoada em Panelas de Barro</h3>
+                <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Servida aos sábados com couve, torresmo, farofa e acompanhamentos. Consulte disponibilidade no salão.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Prévia das Categorias Principais -->
+      <section class="w-full bg-surface-container-low border-y border-outline-variant">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-6">
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-on-surface" data-design-text-token="headline-lg">
+              Principais Categorias
+            </h2>
+            <a href="../categories-desktop/CategoriesDesktop.html" class="inline-flex items-center gap-1.5 font-label text-label-lg text-primary hover:underline shrink-0" data-design-text-token="label-lg">
+              Ver todas
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-6 gap-4 items-stretch">
+            <a href="../porcoes-desktop/PorcoesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBWQHqwi-dfvIjPfqKzxSCb5-COI6YImz8qRvRzAfqI7h8Ep3aY1ctj7FZihNHvz-vr7g5p4GRT2_JnLVyWcg-y9Zn3mi2_vGJPO3aZpX0BM_pws_l_Ko4R_kj-cK7ctNJLT1NESYpEuQt52iJ2R90D1MrVG3XiE2_Yhxhl8fz4BaH2YPReYhGUfUd9fWnjiTOx3X3kJ90zTvUQx2ovLhs0R-0KvbdCIxPDfWAwRV2eyfAWlI4" alt="Lanches" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Lanches</h3>
+              </div>
+            </a>
+            <a href="../porcoes-desktop/PorcoesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrA0gdTZ2982J9TbajSGOhhWIvi2_F0Gp-JBiYEBXL5H8UMxcaf9cRDFUBsdK4qdK91nAqcykSEwKbFB3q3AqtmsG_92No01kRySk431TSckQWcNzKvGRJyZPuDIzQAzpYnJ_znPYXbUSVNGQ7U6HS-lTd9dyXY3uA1VpcwELC0jkZ0T_J2tc4__8lVqEyDusdtgVFMUqgADkKyOt2OaVUmAT1ZiMsEcH2vfxeff-vOOmwHwmd8" alt="Porções" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Porções</h3>
+              </div>
+            </a>
+            <a href="../categories-desktop/CategoriesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrDwDBTBh_wnlrNJMWwHIjr7HuQ8fypNP8rLrWcbkcThWfvI1_JWefaEcIl_NVggKDLr2V312Rnuanl_vXMhE6SkSVH20JO1YaQ0V-cjC0YAA4-Tx46W4OXPiU5pcIKzDT9r2ySaprXqSq7Gu6rqjpNPIf_DJdsFeut-v8nY9tn0w_zP2tfzUK1MbQXiay-QVx_DbFjGFlOo8pm3Qv-YuunemHI0ex3JkDMslvFojkhBMphDmVCN" alt="Cervejas" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Cervejas</h3>
+              </div>
+            </a>
+            <a href="../categories-desktop/CategoriesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrC_oBwtiXJ9_d4-79W4rCvqvzf8t08AZ0kEzH8MAi-q40see4uNUOY25aY0a0ylVsHxGx85EcYycjcq7-6ZUIxbDElyo8GSGnX7DJoty6jH1aES5tABUc1a7O_0fNht6p-1RaqQruJQl4a7CLJ4KYIlnf_8sOUU4Abt38HXpHxosW78YS_2F9cs5fztrFrSgL58H3hZZDqoZLt0wV9o90tx8hXiy1c2wkMXSgaka6Kn6iwu3bI" alt="Bebidas" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Bebidas</h3>
+              </div>
+            </a>
+            <a href="../categories-desktop/CategoriesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBAU7PyrBZNvyKAVKzGpaom1kitxADM7YrtEzkHBclQMcouMACfnatBJAd7K96v5kvHVPsTwbXKzlct2j10xj7mAZJ1AUS2FKjtC3fE_VZDxHbN4hjUOQAaqGe3QWbOffVvUnsQQ5X3iGgsA2LSz8mf98oBja1qhfUNpsQIdmPhSJ7bBAv1KT_bOfbGYuyaNsy8SMAlDYdZ8Yq1M4UyBS6Em5K2Y9bntaYz8n4a8W7aC-ZtiA" alt="Whisky" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Whisky</h3>
+              </div>
+            </a>
+            <a href="../categories-desktop/CategoriesDesktop.html" class="group flex flex-col h-full rounded-md bg-surface-container-lowest border border-outline-variant overflow-hidden hover:border-primary transition-colors duration-state-change">
+              <div class="aspect-[4/3] w-full bg-surface-container-high overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAAQUpE35inzphHkAXY2z_JenDISID2bCyNKYjIGrGKIAJUE3eV1umaCxC7zKsKi-FuACycDm0TXf_hlJor8Xk-sw8tZxTxAiM5BJE6zUUc1MZ1NAyJOBQtlF8VI0tZZ8xjRZFxVyqs79DScxNXeQMtvCdCDHRqYMX4XxG-W-JuAxgM2TqrT5yqBdTKw94Kdb5qIgY3GNKH2PyjPjZ4v9B4p3pd8Kx_-5VooPAj0nDLua8v9g" alt="Combos" class="w-full h-full object-cover">
+              </div>
+              <div class="p-3.5">
+                <h3 class="font-title text-title-md text-on-surface group-hover:text-primary" data-design-text-token="title-md">Combos</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nossa Casa no Tatuapé (Fotos reais) -->
+      <section class="max-w-7xl w-full mx-auto px-6 lg:px-12 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 flex flex-col gap-3">
+          <h2 class="font-headline text-headline-lg-mobile lg:text-headline-lg text-on-surface text-balance" data-design-text-token="headline-lg">
+            O Salão e a Calçada
+          </h2>
+          <p class="font-body text-body-lg text-on-surface-variant text-pretty" data-design-text-token="body-lg">
+            Da fachada com toldo verde e mosaico de ondas de Copacabana ao salão de ladrilhos hidráulicos, mesas de madeira e quadros históricos nas paredes.
+          </p>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+          <div class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant bg-surface-container-high">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDs_rvuryYC86TvcD40YJDIiBVV03t6Sd5rX7ySexvrPP3tWrrFuObBxjTyTZ8J4UthX33_0TKtlZ9Om7gKR0KiDi6I23TR71WOJRscNzfRRPnRnqXlPegUsw1PejfdZ2Tpfvxfee1LnzTFznXaHnppzJv7cLvPNOzhVVZn8lmn5qTM21A0y3PjW0iTdd41JCUWLbxcKeW5rdQ4b-c19b-CfjlQS7Z_09IfpgmxSQ0rRKEnNfDJmQkrYy0" alt="Fachada real do Copacabana Bar no Tatuapé" class="w-full h-full object-cover">
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant bg-surface-container-high">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDPOl20fYzf4L2iVNgX6shtnWwpQD3H_wC0KLWKACpZhoT-JhPxEhUhhS27lfpGWSw1Tl64FTQ7b1KoAOerRWJgGniWB_UQqERYsV8e-q9xi-8pU1jhkXEa590evYPBQ3u7No5hIEYDSrPxkasVxFlUT3mMQFNGf4Y7AUnQ5LM4Z6PZ9TZOfGdbxY-bzkXOemvhCPJIN9gJzzPo1wxO47OX9X-QXAvvQC5AhN-jKjwqHPMcDjXm2dx9FLU" alt="Salão interno real com mesas de madeira e quadros" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer compartilhado full-width -->
+    <footer class="w-full bg-inverse-surface text-inverse-on-surface mt-auto">
+      <div class="w-full h-4 bg-surface text-inverse-surface overflow-hidden" aria-hidden="true">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 16" fill="currentColor">
+          <path d="M0 8 Q 30 0, 60 8 T 120 8 T 180 8 T 240 8 T 300 8 T 360 8 T 420 8 T 480 8 T 540 8 T 600 8 T 660 8 T 720 8 T 780 8 T 840 8 T 900 8 T 960 8 T 1020 8 T 1080 8 T 1140 8 T 1200 8 T 1260 8 T 1320 8 T 1380 8 T 1440 8 L 1440 16 L 0 16 Z"></path>
+        </svg>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex flex-col gap-1">
+          <p class="font-title text-title-md text-inverse-on-surface" data-design-text-token="title-md">
+            Copacabana Bar · Tatuapé, São Paulo
+          </p>
+          <p class="font-body text-body-md text-outline-variant" data-design-text-token="body-md">
+            Cardápio digital exclusivamente para consulta no salão. Não realiza pedidos ou entregas.
+          </p>
+        </div>
+        <p class="font-label text-label-sm text-outline-variant md:text-right" data-design-text-token="label-sm">
+          Conceito independente e não oficial de design · Valores e itens ilustrativos.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>

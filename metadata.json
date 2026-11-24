@@ -1,0 +1,6 @@
+{
+  "name": "Copacabana Bar — Cardápio Digital",
+  "description": "Cardápio digital do Copacabana Bar no Tatuapé, São Paulo — porções, lanches, cervejas, bebidas, whisky e combos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copacabana Bar — Porções (Desktop)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003422',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#174B36',
+        'on-primary-container': '#86BA9F',
+        'secondary': '#9E412A',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#FF8B6E',
+        'on-secondary-container': '#75230E',
+        'tertiary': '#00313E',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#08485A',
+        'on-tertiary-container': '#82B6CB',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#93000A',
+        'background': '#FFF8F2',
+        'on-background': '#1F1B15',
+        'surface': '#FFF8F2',
+        'surface-dim': '#E1D9CE',
+        'surface-bright': '#FFF8F2',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#FBF2E7',
+        'surface-container': '#F5EDE1',
+        'surface-container-high': '#F0E7DC',
+        'surface-container-highest': '#EAE1D6',
+        'on-surface': '#1F1B15',
+        'surface-variant': '#DCE5DD',
+        'on-surface-variant': '#404943',
+        'outline': '#717973',
+        'outline-variant': '#C0C9C2',
+        'inverse-surface': '#343029',
+        'inverse-on-surface': '#F8EFE4',
+        'inverse-primary': '#9DD2B6',
+        'shadow': '#000000',
+        'scrim': '#000000',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Crimson Pro"', 'sans-serif'],
+        'headline': ['"Crimson Pro"', 'sans-serif'],
+        'title': ['"Crimson Pro"', 'sans-serif'],
+        'body': ['"Lato"', 'sans-serif'],
+        'label': ['"Lato"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['17px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.25px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '700' }],
+        'mono-md': ['15px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+        'surface-exit': '160ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&amp;family=Lato:wght@400;700&amp;family=Source+Code+Pro:wght@600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+  <div class="min-h-[1024px] flex flex-col bg-surface" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Header compartilhado full-width (Desktop 1440px) -->
+    <header class="sticky top-0 z-30 w-full bg-primary-container text-on-primary border-b border-primary">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between gap-6">
+        <a href="../home-desktop/HomeDesktop.html" class="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-on-primary rounded">
+          <svg width="44" height="28" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="shrink-0 text-on-primary">
+            <path d="M4 38C10 20 18 10 25 10C32 10 35 22 43 22C51 22 57 16 68 38H4Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"></path>
+            <path d="M4 42H68" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <div class="flex flex-col leading-none">
+            <span class="font-headline text-title-lg tracking-wide text-on-primary" data-design-text-token="title-lg">COPACABANA BAR</span>
+            <span class="font-label text-label-sm text-on-primary-container" data-design-text-token="label-sm">Tatuapé · São Paulo</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegação principal" class="hidden md:flex items-center gap-8">
+          <a href="../home-desktop/HomeDesktop.html" class="font-label text-label-lg text-on-primary-container hover:text-on-primary transition-colors duration-state-change pb-1" data-design-text-token="label-lg">
+            Início
+          </a>
+          <a href="../categories-desktop/CategoriesDesktop.html" class="font-label text-label-lg text-on-primary-container hover:text-on-primary transition-colors duration-state-change pb-1" data-design-text-token="label-lg">
+            Categorias
+          </a>
+          <a href="../porcoes-desktop/PorcoesDesktop.html" aria-current="page" class="font-label text-label-lg text-on-primary border-b-2 border-on-primary pb-1" data-design-text-token="label-lg">
+            Porções
+          </a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary-container border border-on-primary-container font-label text-label-sm" data-design-text-token="label-sm">
+            Cardápio de Consulta
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-6 lg:px-12 py-10 flex flex-col gap-8">
+
+      <!-- Cabeçalho da categoria com volta e busca -->
+      <div class="flex flex-col gap-6 border-b border-outline-variant pb-6">
+        <a href="../categories-desktop/CategoriesDesktop.html" class="inline-flex self-start items-center gap-1.5 font-label text-label-lg text-primary hover:underline">
+          <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_back</span>
+          <span class="font-label text-label-lg" data-design-text-token="label-lg">Voltar às Categorias</span>
+        </a>
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="flex flex-col gap-2">
+            <h1 class="font-display text-display-lg-mobile lg:text-display-lg text-on-surface" data-design-text-token="display-lg">
+              Porções
+            </h1>
+            <p class="font-body text-body-lg text-on-surface-variant max-w-prose" data-design-text-token="body-lg">
+              Clássicos de boteco preparados na hora para compartilhar na mesa com chopp gelado.
+            </p>
+          </div>
+
+          <form data-component-id="searchbar-standard" data-component-type="searchbar" data-component-variant="standard" role="search" class="flex items-center w-full md:w-96 rounded bg-surface-container-lowest border border-outline-variant px-4 py-2.5 gap-3 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary">
+            <input id="search-porcoes-desktop" type="search" aria-label="Buscar em Porções" placeholder="Buscar porção ou ingrediente..." class="w-full min-w-0 border-0 bg-transparent p-0 font-body text-body-md text-on-surface placeholder:text-on-surface-variant focus:ring-0">
+            <button type="submit" aria-label="Buscar" class="inline-flex items-center justify-center text-primary shrink-0">
+              <span class="material-symbols-outlined text-title-md">search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Grid 2x2 de Porções -->
+      <section aria-label="Lista de porções" class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+
+        <a href="../dish-detail-desktop/DishDetailDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col sm:flex-row h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-full sm:w-56 aspect-[4/3] sm:aspect-auto shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDHs5B2StjmK_TVZM2Zqq-d2teM4HIbnR8ff2NYJmsRJl005_TsXqkxBi84eNv9GisHdA8K1rx7lVj3yBr3liorNaMP6zOh6azsXSX-ER_aYslv23STe-Jy9IiJRxaRfenuweZgnZwYpfeOjwGSB235CYjUq4LUDyPKQ9rA9VI46IXdRa5jL8f9VhoxY3Sy1qFPpxMrHE7AGq64k_O4upS5FT6BzH6uZ7VNlRS6XtMCTv_A0a7qSaTdXI-K43TMYUpr" alt="Porção de Bolinho de Bacalhau" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Bolinho de Bacalhau</h2>
+                <span class="font-mono text-mono-md text-primary tabular-nums shrink-0" data-design-text-token="mono-md">R$ --,--</span>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Receita tradicional carioca com bacalhau desfiado, batata, salsinha fresca e gomos de limão.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant flex items-center justify-between gap-2">
+              <span class="font-label text-label-sm text-on-surface-variant" data-design-text-token="label-sm">Valor ilustrativo · Consulte no salão</span>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary shrink-0" data-design-text-token="label-lg">
+                Detalhes <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../dish-detail-desktop/DishDetailDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col sm:flex-row h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-full sm:w-56 aspect-[4/3] sm:aspect-auto shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrCaZkCui4eUZMuvg9Swl6u-KQyytI28oEFFIMwsNZS1udCBOUeH7bQjve4WOoB01m4Gi9tInK2_7shtUQ7wnXnByvnPI8VLTbOD1V98kdpL_2TpqgNJvbscqi3xcVFfkgOr-Kj-dCOWhnNIEmqGVDMlopXjzq3BX7MC08Fh4Tlvc2pL9EJVfwjtg05wXywnnz0zvcYPh0YJFRr2zDwbKFuSK6pf3pDVYfsQJBq3LGYZphpiPHpAF37wRSU7qfXLelW5" alt="Porção de Picanha Acebolada" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Picanha Acebolada</h2>
+                <span class="font-mono text-mono-md text-primary tabular-nums shrink-0" data-design-text-token="mono-md">R$ --,--</span>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Tiras de picanha grelhadas na chapa com cebola dourada e farofa crocante da casa.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant flex items-center justify-between gap-2">
+              <span class="font-label text-label-sm text-on-surface-variant" data-design-text-token="label-sm">Valor ilustrativo · Consulte no salão</span>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary shrink-0" data-design-text-token="label-lg">
+                Detalhes <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../dish-detail-desktop/DishDetailDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col sm:flex-row h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-full sm:w-56 aspect-[4/3] sm:aspect-auto shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBuWR0ZW_QlfhN_DX0DjGKYls2E8ElFfMn9xIUTMMoCmPCYlFOt0mTaLBcGjtaZ0Zj774yRODLFttq-2FS3O6Yf6grVf2byHdCZK-U01GwFHyP6IcQLPTY6uvsjZUB1Sj1NV0KKWeq0-rOrQaC0gyySSGCErfFtrBsZ7ooP3o6FZ2Gjni8G8mK5gS3op6ls95FgzvYKHHcdNISdOYaFeqE59sK06gTqbygVxbyOXFj7im5HrmFj0AbBgB8nMMzHWA" alt="Porção de Mandioca Frita" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Mandioca Frita</h2>
+                <span class="font-mono text-mono-md text-primary tabular-nums shrink-0" data-design-text-token="mono-md">R$ --,--</span>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Palitos dourados por fora e macios por dentro, finalizados com sal grosso e ervas.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant flex items-center justify-between gap-2">
+              <span class="font-label text-label-sm text-on-surface-variant" data-design-text-token="label-sm">Valor ilustrativo · Consulte no salão</span>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary shrink-0" data-design-text-token="label-lg">
+                Detalhes <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../dish-detail-desktop/DishDetailDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex flex-col sm:flex-row h-full rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-full sm:w-56 aspect-[4/3] sm:aspect-auto shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrAY-Mt5i6PmKAhZ9GiDYXm6wnNHvVY_O6Fzej1jXGsY48EPHMCaTaytre05309cGeZMlEWM3rAgC5f_Bd1-MUJapD6LtnxJAiukV6TFl-WiNyjZ8oGsGpz6YRYLzhdhnsbU9twgIALDOnyHU9iUG5ny29ap56mZykv3xx8cazzbhLI4WCaCZlT_UeNqO53x1sk1BJZnPVvz3WB7U88qwLhShgENah-FEuemDQj8EvNG8q0KNYww5GfuQ1YvOFDDGw" alt="Cesta de Pastéis Mistos" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between gap-3">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Pastéis Mistos</h2>
+                <span class="font-mono text-mono-md text-primary tabular-nums shrink-0" data-design-text-token="mono-md">R$ --,--</span>
+              </div>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+                Massa fina e sequinha recheada com carne temperada e queijo derretido, servida com limão.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant flex items-center justify-between gap-2">
+              <span class="font-label text-label-sm text-on-surface-variant" data-design-text-token="label-sm">Valor ilustrativo · Consulte no salão</span>
+              <span class="inline-flex items-center gap-1 font-label text-label-lg text-primary shrink-0" data-design-text-token="label-lg">
+                Detalhes <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </section>
+    </main>
+
+    <!-- Footer compartilhado full-width -->
+    <footer class="w-full bg-inverse-surface text-inverse-on-surface mt-auto">
+      <div class="w-full h-4 bg-surface text-inverse-surface overflow-hidden" aria-hidden="true">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 16" fill="currentColor">
+          <path d="M0 8 Q 30 0, 60 8 T 120 8 T 180 8 T 240 8 T 300 8 T 360 8 T 420 8 T 480 8 T 540 8 T 600 8 T 660 8 T 720 8 T 780 8 T 840 8 T 900 8 T 960 8 T 1020 8 T 1080 8 T 1140 8 T 1200 8 T 1260 8 T 1320 8 T 1380 8 T 1440 8 L 1440 16 L 0 16 Z"></path>
+        </svg>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex flex-col gap-1">
+          <p class="font-title text-title-md text-inverse-on-surface" data-design-text-token="title-md">
+            Copacabana Bar · Tatuapé, São Paulo
+          </p>
+          <p class="font-body text-body-md text-outline-variant" data-design-text-token="body-md">
+            Cardápio digital exclusivamente para consulta no salão. Não realiza pedidos ou entregas.
+          </p>
+        </div>
+        <p class="font-label text-label-sm text-outline-variant md:text-right" data-design-text-token="label-sm">
+          Conceito independente e não oficial de design · Valores e itens ilustrativos.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>

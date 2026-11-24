@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copacabana Bar — Categorias (Mobile)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#003422',
+        'on-primary': '#FFFFFF',
+        'primary-container': '#174B36',
+        'on-primary-container': '#86BA9F',
+        'secondary': '#9E412A',
+        'on-secondary': '#FFFFFF',
+        'secondary-container': '#FF8B6E',
+        'on-secondary-container': '#75230E',
+        'tertiary': '#00313E',
+        'on-tertiary': '#FFFFFF',
+        'tertiary-container': '#08485A',
+        'on-tertiary-container': '#82B6CB',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+        'error-container': '#FFDAD6',
+        'on-error-container': '#93000A',
+        'background': '#FFF8F2',
+        'on-background': '#1F1B15',
+        'surface': '#FFF8F2',
+        'surface-dim': '#E1D9CE',
+        'surface-bright': '#FFF8F2',
+        'surface-container-lowest': '#FFFFFF',
+        'surface-container-low': '#FBF2E7',
+        'surface-container': '#F5EDE1',
+        'surface-container-high': '#F0E7DC',
+        'surface-container-highest': '#EAE1D6',
+        'on-surface': '#1F1B15',
+        'surface-variant': '#DCE5DD',
+        'on-surface-variant': '#404943',
+        'outline': '#717973',
+        'outline-variant': '#C0C9C2',
+        'inverse-surface': '#343029',
+        'inverse-on-surface': '#F8EFE4',
+        'inverse-primary': '#9DD2B6',
+        'shadow': '#000000',
+        'scrim': '#000000',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Crimson Pro"', 'sans-serif'],
+        'headline': ['"Crimson Pro"', 'sans-serif'],
+        'title': ['"Crimson Pro"', 'sans-serif'],
+        'body': ['"Lato"', 'sans-serif'],
+        'label': ['"Lato"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-md': ['28px', { lineHeight: '34px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['17px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.25px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '700' }],
+        'mono-md': ['15px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+        'surface-exit': '160ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&amp;family=Lato:wght@400;700&amp;family=Source+Code+Pro:wght@600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+  <div class="min-h-[884px] flex flex-col bg-surface" data-stitch-vh="min-h-[884px]===min-h-screen">
+
+    <!-- Header compartilhado (Mobile) -->
+    <header class="sticky top-0 z-30 w-full bg-primary-container text-on-primary border-b border-primary">
+      <div class="px-4 py-3 flex items-center justify-between gap-3">
+        <a href="../home-mobile/HomeMobile.html" class="flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-on-primary rounded">
+          <svg width="36" height="24" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="shrink-0 text-on-primary">
+            <path d="M4 38C10 20 18 10 25 10C32 10 35 22 43 22C51 22 57 16 68 38H4Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"></path>
+            <path d="M4 42H68" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <div class="flex flex-col leading-none">
+            <span class="font-headline text-title-md tracking-wide text-on-primary" data-design-text-token="title-md">COPACABANA</span>
+            <span class="font-label text-label-sm text-on-primary-container" data-design-text-token="label-sm">Bar · Tatuapé</span>
+          </div>
+        </a>
+        <nav aria-label="Navegação principal" class="flex items-center gap-3">
+          <a href="../categories-mobile/CategoriesMobile.html" aria-current="page" class="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-surface text-primary font-label text-label-sm">
+            <span class="material-symbols-outlined text-body-lg" aria-hidden="true">restaurant_menu</span>
+            <span class="font-label text-label-sm" data-design-text-token="label-sm">Cardápio</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 flex flex-col gap-6 px-4 py-6">
+
+      <div class="flex flex-col gap-2">
+        <h1 class="font-display text-display-lg-mobile text-on-surface text-balance" data-design-text-token="display-lg-mobile">
+          Cardápio do Boteco
+        </h1>
+        <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+          Escolha uma categoria para explorar os clássicos da casa.
+        </p>
+      </div>
+
+      <!-- Destaque Especial: Feijoada de Sábado -->
+      <section aria-label="Destaque especial">
+        <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="flex flex-col rounded-lg bg-surface-container-low border border-secondary overflow-hidden">
+          <div class="aspect-[16/9] w-full bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBUAh-gg1x90wtxv7K1gkYWBkysnXNpJ-30HN2yWeQxIZWZ9Qw1jRlYI_3p_Urqm_94lAQuhtWEmJu60QrR2N6UUihkhqVFmBhWHkVEdqCKhKaYCe_RJiwAKlrYJik_kCcVg1Vw8c0L_5WTYpR07zK93SCkPPDEQHO3oIrX27z-hZef-jHrCQkqsGdAX0K9R88bXsUq--vYbmCS3sIu6YJa-39M2EqlHycDEAd0vkV-W3ijtUEIrUAhhZs" alt="Buffet de feijoada de sábado em panelas de barro" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary" data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status">
+                <span class="font-label text-label-sm" data-design-text-token="label-sm">Especial de Sábado</span>
+              </span>
+            </div>
+            <h2 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Feijoada</h2>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Oferta especial de sábado servida em panelas de barro com acompanhamentos tradicionais. Consulte disponibilidade no salão.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Lista de Categorias Oficiais -->
+      <section aria-label="Todas as categorias" class="grid grid-cols-1 gap-4">
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrA0gdTZ2982J9TbajSGOhhWIvi2_F0Gp-JBiYEBXL5H8UMxcaf9cRDFUBsdK4qdK91nAqcykSEwKbFB3q3AqtmsG_92No01kRySk431TSckQWcNzKvGRJyZPuDIzQAzpYnJ_znPYXbUSVNGQ7U6HS-lTd9dyXY3uA1VpcwELC0jkZ0T_J2tc4__8lVqEyDusdtgVFMUqgADkKyOt2OaVUmAT1ZiMsEcH2vfxeff-vOOmwHwmd8" alt="Porções para compartilhar" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Porções</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Bolinhos, carnes na chapa e petiscos para dividir na mesa.
+            </p>
+          </div>
+        </a>
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBWQHqwi-dfvIjPfqKzxSCb5-COI6YImz8qRvRzAfqI7h8Ep3aY1ctj7FZihNHvz-vr7g5p4GRT2_JnLVyWcg-y9Zn3mi2_vGJPO3aZpX0BM_pws_l_Ko4R_kj-cK7ctNJLT1NESYpEuQt52iJ2R90D1MrVG3XiE2_Yhxhl8fz4BaH2YPReYhGUfUd9fWnjiTOx3X3kJ90zTvUQx2ovLhs0R-0KvbdCIxPDfWAwRV2eyfAWlI4" alt="Lanches tradicionais" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Lanches</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Sanduíches no pão crocante preparados na chapa do boteco.
+            </p>
+          </div>
+        </a>
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrDwDBTBh_wnlrNJMWwHIjr7HuQ8fypNP8rLrWcbkcThWfvI1_JWefaEcIl_NVggKDLr2V312Rnuanl_vXMhE6SkSVH20JO1YaQ0V-cjC0YAA4-Tx46W4OXPiU5pcIKzDT9r2ySaprXqSq7Gu6rqjpNPIf_DJdsFeut-v8nY9tn0w_zP2tfzUK1MbQXiay-QVx_DbFjGFlOo8pm3Qv-YuunemHI0ex3JkDMslvFojkhBMphDmVCN" alt="Cervejas de garrafa e chopp" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Cervejas</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Chopp tirado na hora e garrafas 600ml bem geladas.
+            </p>
+          </div>
+        </a>
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrC_oBwtiXJ9_d4-79W4rCvqvzf8t08AZ0kEzH8MAi-q40see4uNUOY25aY0a0ylVsHxGx85EcYycjcq7-6ZUIxbDElyo8GSGnX7DJoty6jH1aES5tABUc1a7O_0fNht6p-1RaqQruJQl4a7CLJ4KYIlnf_8sOUU4Abt38HXpHxosW78YS_2F9cs5fztrFrSgL58H3hZZDqoZLt0wV9o90tx8hXiy1c2wkMXSgaka6Kn6iwu3bI" alt="Caipirinhas, sucos e refrigerantes" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Bebidas</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Caipirinhas clássicas, drinks de balcão, sucos e sem álcool.
+            </p>
+          </div>
+        </a>
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBAU7PyrBZNvyKAVKzGpaom1kitxADM7YrtEzkHBclQMcouMACfnatBJAd7K96v5kvHVPsTwbXKzlct2j10xj7mAZJ1AUS2FKjtC3fE_VZDxHbN4hjUOQAaqGe3QWbOffVvUnsQQ5X3iGgsA2LSz8mf98oBja1qhfUNpsQIdmPhSJ7bBAv1KT_bOfbGYuyaNsy8SMAlDYdZ8Yq1M4UyBS6Em5K2Y9bntaYz8n4a8W7aC-ZtiA" alt="Doses e garrafas de whisky" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Whisky</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Rótulos selecionados servidos em dose ou garrafa no gelo.
+            </p>
+          </div>
+        </a>
+
+        <a href="../porcoes-mobile/PorcoesMobile.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="group flex items-stretch rounded-lg bg-surface-container-lowest border border-outline-variant overflow-hidden transition-transform duration-state-change ease-state-change hover:-translate-y-0.5">
+          <div class="w-32 shrink-0 bg-surface-container-high overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrAAQUpE35inzphHkAXY2z_JenDISID2bCyNKYjIGrGKIAJUE3eV1umaCxC7zKsKi-FuACycDm0TXf_hlJor8Xk-sw8tZxTxAiM5BJE6zUUc1MZ1NAyJOBQtlF8VI0tZZ8xjRZFxVyqs79DScxNXeQMtvCdCDHRqYMX4XxG-W-JuAxgM2TqrT5yqBdTKw94Kdb5qIgY3GNKH2PyjPjZ4v9B4p3pd8Kx_-5VooPAj0nDLua8v9g" alt="Combos para compartilhar na mesa" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-1">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-title text-title-lg text-on-surface group-hover:text-primary" data-design-text-token="title-lg">Combos</h2>
+              <span class="material-symbols-outlined text-primary text-title-md" aria-hidden="true">arrow_forward</span>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty" data-design-text-token="body-md">
+              Combinações pensadas para reunir os amigos no fim de tarde.
+            </p>
+          </div>
+        </a>
+
+      </section>
+    </main>
+
+    <!-- Footer compartilhado -->
+    <footer class="w-full bg-inverse-surface text-inverse-on-surface mt-auto">
+      <div class="w-full h-3 bg-surface text-inverse-surface overflow-hidden" aria-hidden="true">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 390 12" fill="currentColor">
+          <path d="M0 6 Q 16.25 0, 32.5 6 T 65 6 T 97.5 6 T 130 6 T 162.5 6 T 195 6 T 227.5 6 T 260 6 T 292.5 6 T 325 6 T 357.5 6 T 390 6 L 390 12 L 0 12 Z"></path>
+        </svg>
+      </div>
+      <div class="px-4 py-6 flex flex-col gap-2">
+        <p class="font-title text-title-md text-inverse-on-surface" data-design-text-token="title-md">
+          Copacabana Bar · Tatuapé, São Paulo
+        </p>
+        <p class="font-body text-body-md text-outline-variant text-pretty" data-design-text-token="body-md">
+          Cardápio digital exclusivamente para consulta no salão. Não realiza pedidos ou entregas.
+        </p>
+        <p class="font-label text-label-sm text-outline-variant pt-2 border-t border-outline" data-design-text-token="label-sm">
+          Conceito independente e não oficial de design · Valores e itens ilustrativos.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>
